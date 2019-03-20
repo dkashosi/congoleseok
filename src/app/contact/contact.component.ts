@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  nav: any;
+
+  constructor() {
+    this.nav = "Please Contact Us By Filling this Form";
+   }
 
   ngOnInit() {
   }

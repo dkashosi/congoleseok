@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  nav: any;
+  preambule: any;
+
+  constructor(private dataService: DataService) { 
+    this.nav = "About Us";
+  }
 
   ngOnInit() {
+    this.dataService.getStatus().subscribe(value =>{
+      this.preambule =value.preambule;
+    })
   }
 
 }

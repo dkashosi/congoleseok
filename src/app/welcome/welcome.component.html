@@ -1,81 +1,32 @@
-
-
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Offre d'emplois.
-              </h2>
-              <h3 class="post-subtitle">
-                professeur recherche 2 personne pour travaux manuel.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">CCOKC</a>
-              on November 19, 2018</p>
-          </div>
+<!-- Main Content -->
+<app-nav [input]="nav"></app-nav>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div *ngIf="display.length > 0" >
+        <div *ngFor="let post of display" class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+              {{post.title}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.subtitle}} </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">CCOKC</a>
+            on {{post.createdDate}}</p>
           <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Comunique Necrologique.
-              </h2>
-			  <h3 class="post-subtitle">
-                Maman Marie-Virginie revient de Kinshasa.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">CCOKC</a>
-              on November 05, 2018</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-          </div>
         </div>
       </div>
+        <div *ngIf="display.length < 1"><p>there is not any post yet come back later</p></div>
+
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" (click)="LoadOld()">Older Posts &rarr;</a>
+        </div>
     </div>
+  </div>
+</div>
 
-    <hr>
+  <hr>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+  <app-footer></app-footer>

@@ -1,0 +1,24 @@
+<app-admin></app-admin>
+
+<div class="container">
+  <div class="row">
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            <th class="text-center">Title</th>
+            <th class="text-center">Edit</th>
+            <th class="text-center">Remove</th>
+          </tr>
+          <tr *ngFor="let post of listPost">
+            <td class="pt-3-half" contenteditable="true">{{post.title}}</td>
+            <td >
+                <span class="table-remove"><button type="button" routerLink= "/admPost/{{post.id}}" class="btn btn-danger btn-rounded btn-sm my-0">edit</button></span>
+
+            </td>
+            
+            <td>
+              <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+            </td>
+          </tr>
+        </table>
+  </div>
+</div>

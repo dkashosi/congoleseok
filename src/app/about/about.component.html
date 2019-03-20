@@ -1,15 +1,9 @@
 
-  
+  <app-nav [input]='nav'></app-nav>
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Réunis le 30 Juin 2018, à Oklahoma City, OK, Etats Unis ;</p>
-        <p>Mus par la volonté de créer une entente durable pour une cohésion et une coordination stable en vue de promouvoir la Communauté des Congolais établis à Oklahoma City Metroplex, Oklahoma ;</p>
-        <p>Conscients de la capacité de tous les Congolais et Congolaises à œuvrer ensemble pour leur bien-être, sans discrimination d’âge, de sexe, d’origine ethnique, d’appartenance politique ou de croyance religieuse ;</p>
-    <p>Vu la nécessité de nous unir sur base d’appartenance à la nation Congolaise afin de défendre ensemble nos intérêts ; </p>
-    <p>Nous, Congolais résidant dans la métropole d’Oklahoma City, avons décidé la création d’un « véhicule » de solidarité, d’entente, de fraternité et de soutien mutuel qui sera régi selon les dispositions des présents Statuts. </p>
-      </div>
+      <div class="col-lg-8 col-md-10 mx-auto">{{preambule}}</div>
     </div>
   
       <div class="row">
@@ -21,7 +15,7 @@
     <div class="col-sm-2 col-lg-2 col-md-2 mx-auto"></div>
         <div class="col-sm-4 col-lg-4 col-md-4 mx-auto">
             <img class="col-sm-4 col-lg-4 col-md-4 mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
+            <h4></h4>
             <p class="text-muted">1 Président</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
@@ -128,40 +122,4 @@
   </div>
 
   <hr>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+<app-footer></app-footer>
