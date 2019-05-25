@@ -12,7 +12,7 @@ export class AboutComponent implements OnInit {
   preambule: any;
 
   constructor(private dataService: DataService) { 
-    this.nav = "About Us";
+    this.nav = "Apropos De Nous";
   }
 
   ngOnInit() {

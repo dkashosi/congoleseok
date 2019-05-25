@@ -10,7 +10,7 @@ export class ContactComponent implements OnInit {
   nav: any;
 
   constructor() {
-    this.nav = "Please Contact Us By Filling this Form";
+    this.nav = "Contact";
    }
 
   ngOnInit() {

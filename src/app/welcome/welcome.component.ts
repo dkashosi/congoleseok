@@ -16,7 +16,7 @@ export class WelcomeComponent implements OnInit {
   nav: any;
 
   constructor(private dataService: DataService) { 
-    this.nav = "Welcome";
+    this.nav = "Bienvenue";
    }
 
   ngOnInit() {
